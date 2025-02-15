@@ -1,0 +1,152 @@
+.model-search-container {
+    padding: 20px;
+    min-height: 90vh;
+    margin-top: 60px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-bar select {
+    min-width: 200px;
+}
+
+.search-bar input {
+    min-width: 300px;
+}
+
+.search-bar .search-btn,
+.search-bar .reset-btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-bar .search-btn {
+    background-color: #c31c00;
+    color: white;
+}
+
+.search-bar .search-btn:hover {
+    background-color: #ac1c03;
+}
+
+.search-bar .reset-btn {
+    background-color: #555;
+    color: white;
+}
+
+.search-bar .reset-btn:hover {
+    background-color: #444;
+}
+
+.selection-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.model-table {
+    flex: 2;
+    min-width: 300px;
+}
+
+.model-table h3 {
+    background-color: #c31c00;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.model-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.model-table th,
+.model-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.model-table th {
+    background-color: #c31c00;
+    color: #fff;
+    text-align: left;
+}
+
+.model-table tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.model-table tr:nth-child(1) {
+    cursor: auto;
+}
+
+.no-data {
+    text-align: center;
+    color: gray;
+}
+
+.variant-table {
+    flex: 1;
+    min-width: 250px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.variant-table h3 {
+    background-color: #c31c00;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.variant-table p {
+    text-align: left;
+    padding: 10px 0px 5px 10px;
+}
+
+.variant-table p:hover {
+    background-color: #fff;
+}
+
+.no-details {
+    color: gray;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .selection-container {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,6 @@
+.justify-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    justify-content: space-between;
+}
