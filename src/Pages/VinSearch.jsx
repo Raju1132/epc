@@ -45,7 +45,7 @@ function VinSearch() {
             onChange={handleChange}
           />
           <div className="flex-button">
-            <button onClick={handleValidate}>VALIDATE</button>
+            <button  onClick={handleValidate}>VALIDATE</button>
             <button onClick={handleClear}>CLEAR</button>
           </div>
         </div>

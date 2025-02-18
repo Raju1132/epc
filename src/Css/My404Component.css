@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100dvh;
+    flex-direction: column;
+    gap: 20px;
+}
+.pnf{
+    font-size: 120px;
+    color: #c31c00;
+    font-style: italic;
+    font-family: cursive;
+    margin-top: 20px;
+}
+.text{
+    font-size: 40px;
+    text-align: center;
+}
+.button{
+    background: #c31c00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}

@@ -12,12 +12,12 @@ import banner4 from "../../assets/home/shine125_home_banner_dev_one.jpg"
 
 function Home() {
     const features = [
-        { icon: <FaSearch />, label: "Model Search", path: "/model-search" },
-        { icon: <FaBarcode />, label: "VIN Search", path: "/vin-search" },
-        { icon: <FaListUl />, label: "Figure Search", path: "/figure-search" },
-        { icon: <FaHeart />, label: "Favorite", path: "/favorite" },
-        { icon: <FaTools />, label: "Accessories", path: "/accessories" },
-        { icon: <FaShoppingCart />, label: "Shop Products", path: "/shop-products" },
+        { icon: <FaSearch size={16}/>, label: "Model Search", path: "/model-search" },
+        { icon: <FaBarcode size={16}/>, label: "VIN Search", path: "/vin-search" },
+        { icon: <FaListUl size={16}/>, label: "Figure Search", path: "/figure-search" },
+        { icon: <FaHeart size={16}/>, label: "Favorite", path: "/favorite" },
+        { icon: <FaTools size={16}/>, label: "Accessories", path: "/accessories" },
+        { icon: <FaShoppingCart size={16}/>, label: "Shop Products", path: "/shop-products" },
     ];
     const sliderSettings = {
         dots: true,

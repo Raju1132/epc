@@ -3,13 +3,32 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../Css/Login.css";
-import login1 from "../assets/login/Bike-No-Background.png"
-import login2 from "../assets/login/login3.jpg"
-import login3 from "../assets/login/png-transparent-honda-livo-bike.png"
+import login1 from "../assets/login/Bike-No-Background.png";
+import login2 from "../assets/login/login3.jpg";
+import login3 from "../assets/login/png-transparent-honda-livo-bike.png";
 
 function Login() {
   const [captcha, setCaptcha] = useState("AB12");
   const [userType, setUserType] = useState("retailer");
+  const [forgotModel, setForgotModel] = useState(false); // Initially false for showing the login
+  const [email, setEmail] = useState(""); // For storing the email input
+
+  // Show forgot password modal
+  const handleForget = () => {
+    setForgotModel(true);
+  };
+
+  // Close the forgot password modal
+  const closeForgotModal = () => {
+    setForgotModel(false);
+  };
+
+  // Handle submit of the email for password reset
+  const handleResetSubmit = (e) => {
+    e.preventDefault();
+    alert(`Password reset link sent to ${email}`);
+    closeForgotModal(); 
+  };
 
   const sliderSettings = {
     dots: true,
@@ -49,7 +68,11 @@ function Login() {
             <h2 className="login-heading">Login to your account</h2>
             <form className="login-form">
               <label className="login-label">User Type</label>
-              <select className="login-input" value={userType} onChange={(e) => setUserType(e.target.value)}>
+              <select
+                className="login-input"
+                value={userType}
+                onChange={(e) => setUserType(e.target.value)}
+              >
                 <option value="retailer">Retailer</option>
                 <option value="distribution">Distribution</option>
                 <option value="oem">OEM</option>
@@ -69,7 +92,9 @@ function Login() {
 
               <div className="login-options">
                 <label><input type="checkbox" /> Remember Me</label>
-                <a href="#" className="login-forgot-password">Forgot Password?</a>
+                <div onClick={handleForget} href="#" className="login-forgot-password">
+                  Forgot Password?
+                </div>
               </div>
 
               <div className="login-buttons">
@@ -80,6 +105,31 @@ function Login() {
           </div>
         </div>
       </div>
+
+      {/* Forgot Password Modal */}
+      {forgotModel && (
+        <div className="forgot-password-modal">
+          <div className="modal-overlay" ></div>
+          <div className="forgot-password-content">
+            <h2>Reset Password</h2>
+            <form onSubmit={handleResetSubmit}>
+              <label className="login-label">Enter your email</label>
+              <input
+                type="email"
+                className="login-input"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <div className="login-buttons">
+                <button type="submit" className="login-button login-submit">Submit</button>
+                <button type="button" className="login-button login-reset" onClick={closeForgotModal}>Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

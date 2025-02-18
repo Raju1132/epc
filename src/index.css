@@ -24,3 +24,15 @@ a {
     text-decoration: none;
     color: #000;
 }
+.button{
+    background: #222;
+    color: white;
+    padding: 10px ;
+    border-radius: 5px;
+    width: fit-content;
+    border: none;
+    transition: 0.2s;
+}
+.button:hover{
+    background: #c31c00;
+}

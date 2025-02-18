@@ -8,7 +8,9 @@ import Footer from './Components/Footer';
 import ModelSearch from './Pages/Retailer/ModelSearch';
 import VinSearch from './Pages/VinSearch';
 import Parts from './Pages/Parts';
-
+import My404Component from './Pages/My404Component'
+import PartsIllu from './Pages/illu/ImageSections';
+import ImageSections from './Pages/illu2/ImageSection';
 function Layout({ children }) {
   const location = useLocation();
   const hideHeaderFooter = location.pathname === '/login';
@@ -34,7 +36,9 @@ function App() {
           <Route path="/model-search" element={<ModelSearch />} />
           <Route path="/vin-search" element={<VinSearch/>}/>
           <Route path="/parts/:vinno" element={<Parts/>}/>
-
+          <Route path='*' exact={true} element={<My404Component/>} />
+          <Route path='/illu' element={<PartsIllu/>}/>
+          <Route path="/illu2" element={<ImageSections/>}/>
         </Routes>
       </Layout>
     </Router>

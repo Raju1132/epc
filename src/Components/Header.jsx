@@ -11,7 +11,7 @@ function Header() {
             <div className="logo">
                 <Link to="/">BikeParts</Link>
             </div>
-            <div className="search-box">
+            <div className="search-box ">
                 <input type="text" placeholder="Search for bike parts..." />
                 <button className="search-btn">
                     <FaSearch />
